@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - Pulse家計簿</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            text-align: center;
+            padding: 48px 20px 12px;
+        }
+        .header a {
+            text-decoration: none;
+            color: #86868b;
+            font-size: 14px;
+        }
+        .header a:hover { color: #1d1d1f; }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        .content {
+            max-width: 680px;
+            margin: 24px auto 60px;
+            padding: 32px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        @media (max-width: 720px) {
+            .content { margin-left: 16px; margin-right: 16px; }
+        }
+        .mail-section {
+            text-align: center;
+            padding: 24px 0 32px;
+        }
+        .mail-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: #e8f0fe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 16px;
+        }
+        .mail-section h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .mail-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b8a, #ff8fa3);
+            color: white;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .mail-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 107, 138, 0.3);
+        }
+        .notes {
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5ea;
+        }
+        .notes h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .note-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .note-item .icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: #f5f5f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #86868b;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="./">← Pulse家計簿 サポート</a>
+        <h1>お問い合わせ</h1>
+    </div>
+
+    <div class="content">
+        <div class="mail-section">
+            <div class="mail-icon">✉️</div>
+            <h2>メールでのお問い合わせ</h2>
+            <p>Pulse家計簿に関するご質問・ご要望・不具合報告は<br>下記よりお気軽にご連絡ください。</p>
+            <a href="mailto:contact@reqme.jp" class="mail-link">contact@reqme.jp</a>
+        </div>
+
+        <div class="notes">
+            <h3>お問い合わせの際のお願い</h3>
+            <div class="note-item">
+                <div class="icon">📱</div>
+                <div>iOSのバージョンとアプリのバージョンをお知らせください。</div>
+            </div>
+            <div class="note-item">
+                <div class="icon">🐛</div>
+                <div>不具合のご報告の場合は、発生状況をできるだけ詳しくお書きください。</div>
+            </div>
+            <div class="note-item">
+                <div class="icon">💳</div>
+                <div>サブスクリプションに関するお問い合わせ（返金・課金トラブル等）は <a href="https://support.apple.com/ja-jp" target="_blank" rel="noopener">Appleサポート</a> にお問い合わせください。</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Pulse家計簿
+    </footer>
+</body>
+</html>
