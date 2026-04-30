@@ -104,30 +104,6 @@
             justify-content: center;
         }
 
-        /* 機能リスト */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 16px;
-        }
-        @media (max-width: 480px) {
-            .feature-grid { grid-template-columns: 1fr; }
-        }
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 16px;
-            background: #f9f9fb;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        .feature-item .icon {
-            font-size: 20px;
-        }
-
         /* FAQ */
         .faq-item {
             border-top: 1px solid #e5e5ea;
@@ -222,38 +198,6 @@
             </ol>
         </div>
 
-        <!-- 基本的な使い方 -->
-        <div class="help-card">
-            <h2><span class="emoji">✏️</span>基本的な使い方</h2>
-
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <span class="icon">💰</span>
-                    <span>支出・収入の記録</span>
-                </div>
-                <div class="feature-item">
-                    <span class="icon">📊</span>
-                    <span>月間・年間の分析</span>
-                </div>
-                <div class="feature-item">
-                    <span class="icon">📅</span>
-                    <span>カレンダーで振り返り</span>
-                </div>
-                <div class="feature-item">
-                    <span class="icon">🔄</span>
-                    <span>固定費の自動記録</span>
-                </div>
-                <div class="feature-item">
-                    <span class="icon">🏷️</span>
-                    <span>カテゴリのカスタマイズ</span>
-                </div>
-                <div class="feature-item">
-                    <span class="icon">🎯</span>
-                    <span>カテゴリ別の予算設定</span>
-                </div>
-            </div>
-        </div>
-
         <!-- よくある質問 -->
         <div class="help-card">
             <h2><span class="emoji">💬</span>よくある質問</h2>
@@ -263,20 +207,6 @@
                 <div class="a">プレミアムプランではiCloudバックアップに対応しています。設定 →「バックアップから復元」で引き継ぎできます。</div>
             </div>
 
-            <div class="faq-item">
-                <div class="q">固定費はどう設定しますか？</div>
-                <div class="a">記録入力画面の上部にある「固定費」タブから、毎月自動で記録される支出・収入を設定できます。</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="q">カテゴリは変更・追加できますか？</div>
-                <div class="a">カテゴリタブの右上「管理」ボタンから、カテゴリの追加・並び替え・削除ができます。</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="q">サブスクリプションの解約方法は？</div>
-                <div class="a">iPhoneの「設定」→ Apple ID →「サブスクリプション」から解約できます。詳しくは <a href="https://support.apple.com/ja-jp/HT202039" target="_blank" rel="noopener">Appleサポート</a> をご確認ください。</div>
-            </div>
         </div>
 
         <!-- お問い合わせ誘導 -->
