@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>ヘルプ - Pulse家計簿</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            text-align: center;
+            padding: 48px 20px 12px;
+        }
+        .header a {
+            text-decoration: none;
+            color: #86868b;
+            font-size: 14px;
+        }
+        .header a:hover { color: #1d1d1f; }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        .content {
+            max-width: 680px;
+            margin: 24px auto 60px;
+            padding: 0;
+        }
+        @media (max-width: 720px) {
+            .content { margin-left: 16px; margin-right: 16px; }
+        }
+        .help-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            padding: 28px 32px;
+            margin-bottom: 20px;
+        }
+        .help-card h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .help-card h2 .emoji {
+            font-size: 22px;
+        }
+        .help-card p {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .help-card .sub-text {
+            font-size: 13px;
+            color: #86868b;
+        }
+
+        /* 動画セクション */
+        .video-container {
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+        }
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        /* ステップリスト */
+        .steps {
+            list-style: none;
+            margin: 16px 0 0;
+        }
+        .steps li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: #333;
+        }
+        .step-num {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b8a, #ff8fa3);
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 機能リスト */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        @media (max-width: 480px) {
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background: #f9f9fb;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .feature-item .icon {
+            font-size: 20px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-top: 1px solid #e5e5ea;
+            padding: 16px 0;
+        }
+        .faq-item:first-child {
+            border-top: none;
+            padding-top: 8px;
+        }
+        .faq-item .q {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 6px;
+        }
+        .faq-item .q::before {
+            content: "Q. ";
+            color: #ff6b8a;
+        }
+        .faq-item .a {
+            font-size: 14px;
+            color: #555;
+        }
+        .faq-item .a::before {
+            content: "A. ";
+            color: #86868b;
+            font-weight: 600;
+        }
+
+        .contact-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b8a, #ff8fa3);
+            color: white;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .contact-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 107, 138, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #86868b;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="./">← Pulse家計簿 サポート</a>
+        <h1>ヘルプ</h1>
+    </div>
+
+    <div class="content">
+
+        <!-- ロック画面ウィジェット -->
+        <div class="help-card">
+            <h2><span class="emoji">📱</span>ロック画面にウィジェットを追加する</h2>
+            <p>ロック画面からワンタップで支出を記録できるウィジェットを追加できます。</p>
+
+            <div class="video-container">
+                <video autoplay loop muted playsinline>
+                    <source src="lock_tutorial.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    <div class="step-num">1</div>
+                    <div>ロック画面を<strong>長押し</strong>して編集モードに入ります</div>
+                </li>
+                <li>
+                    <div class="step-num">2</div>
+                    <div><strong>「カスタマイズ」</strong>をタップし、ロック画面を選択します</div>
+                </li>
+                <li>
+                    <div class="step-num">3</div>
+                    <div>ウィジェットエリアをタップし、<strong>「Pulse家計簿」</strong>を選択します</div>
+                </li>
+                <li>
+                    <div class="step-num">4</div>
+                    <div><strong>「完了」</strong>をタップして保存すれば設定完了です</div>
+                </li>
+            </ol>
+        </div>
+
+        <!-- 基本的な使い方 -->
+        <div class="help-card">
+            <h2><span class="emoji">✏️</span>基本的な使い方</h2>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="icon">💰</span>
+                    <span>支出・収入の記録</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📊</span>
+                    <span>月間・年間の分析</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📅</span>
+                    <span>カレンダーで振り返り</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🔄</span>
+                    <span>固定費の自動記録</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🏷️</span>
+                    <span>カテゴリのカスタマイズ</span>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🎯</span>
+                    <span>カテゴリ別の予算設定</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- よくある質問 -->
+        <div class="help-card">
+            <h2><span class="emoji">💬</span>よくある質問</h2>
+
+            <div class="faq-item">
+                <div class="q">データは機種変更しても引き継げますか？</div>
+                <div class="a">プレミアムプランではiCloudバックアップに対応しています。設定 →「バックアップから復元」で引き継ぎできます。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="q">固定費はどう設定しますか？</div>
+                <div class="a">記録入力画面の上部にある「固定費」タブから、毎月自動で記録される支出・収入を設定できます。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="q">カテゴリは変更・追加できますか？</div>
+                <div class="a">カテゴリタブの右上「管理」ボタンから、カテゴリの追加・並び替え・削除ができます。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="q">サブスクリプションの解約方法は？</div>
+                <div class="a">iPhoneの「設定」→ Apple ID →「サブスクリプション」から解約できます。詳しくは <a href="https://support.apple.com/ja-jp/HT202039" target="_blank" rel="noopener">Appleサポート</a> をご確認ください。</div>
+            </div>
+        </div>
+
+        <!-- お問い合わせ誘導 -->
+        <div class="help-card" style="text-align: center;">
+            <h2 style="justify-content: center;"><span class="emoji">🙋</span>解決しない場合</h2>
+            <p>お気軽にお問い合わせください。<br>DMでのお問い合わせにはより早く返信できます。</p>
+            <a href="contact" class="contact-link">お問い合わせはこちら</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Pulse家計簿
+    </footer>
+</body>
+</html>
