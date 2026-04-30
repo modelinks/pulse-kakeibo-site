@@ -39,41 +39,81 @@
         @media (max-width: 720px) {
             .content { margin-left: 16px; margin-right: 16px; }
         }
-        .mail-section {
-            text-align: center;
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
             padding: 24px 0 32px;
         }
-        .mail-icon {
-            width: 56px;
-            height: 56px;
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            background: #f9f9fb;
             border-radius: 14px;
-            background: #e8f0fe;
+            text-decoration: none;
+            color: #1d1d1f;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .contact-card .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            margin: 0 auto 16px;
+            flex-shrink: 0;
         }
-        .mail-section h2 {
-            font-size: 18px;
+        .contact-card .card-icon.instagram {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+        }
+        .contact-card .card-icon.x {
+            background: #000;
+        }
+        .contact-card .card-icon.mail {
+            background: linear-gradient(135deg, #ff6b8a, #ff8fa3);
+        }
+        .contact-card .card-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        .contact-card .card-icon .x-logo {
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .contact-card .card-info {
+            flex: 1;
+        }
+        .contact-card .card-info .card-title {
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 8px;
         }
-        .mail-link {
+        .contact-card .card-info .card-desc {
+            font-size: 13px;
+            color: #86868b;
+            margin-top: 2px;
+        }
+        .contact-card .card-arrow {
+            font-size: 14px;
+            color: #86868b;
+        }
+        .dm-badge {
             display: inline-block;
             background: linear-gradient(135deg, #ff6b8a, #ff8fa3);
             color: white;
-            text-decoration: none;
-            padding: 12px 32px;
-            border-radius: 12px;
-            font-size: 16px;
+            font-size: 11px;
             font-weight: 600;
-            margin-top: 12px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .mail-link:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(255, 107, 138, 0.3);
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-left: 6px;
+            vertical-align: middle;
         }
         .notes {
             margin-top: 28px;
@@ -120,11 +160,42 @@
     </div>
 
     <div class="content">
-        <div class="mail-section">
-            <div class="mail-icon">✉️</div>
-            <h2>メールでのお問い合わせ</h2>
-            <p>Pulse家計簿に関するご質問・ご要望・不具合報告は<br>下記よりお気軽にご連絡ください。</p>
-            <a href="mailto:contact@reqme.jp" class="mail-link">contact@reqme.jp</a>
+        <p style="text-align:center; font-size:15px; color:#333; margin-bottom:8px;">Pulse家計簿に関するご質問・ご要望・不具合報告は<br>下記よりお気軽にご連絡ください。</p>
+        <p style="text-align:center; font-size:13px; color:#86868b; margin-bottom:4px;">DMでのお問い合わせにはより早く返信できます</p>
+
+        <div class="contact-methods">
+            <a href="https://www.instagram.com/pulsekakeibo" target="_blank" rel="noopener" class="contact-card">
+                <div class="card-icon instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Instagram <span class="dm-badge">早い返信</span></div>
+                    <div class="card-desc">@pulsekakeibo</div>
+                </div>
+                <div class="card-arrow">›</div>
+            </a>
+
+            <a href="https://x.com/pulsekakeibo" target="_blank" rel="noopener" class="contact-card">
+                <div class="card-icon x">
+                    <span class="x-logo">𝕏</span>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">X (Twitter) <span class="dm-badge">早い返信</span></div>
+                    <div class="card-desc">@pulsekakeibo</div>
+                </div>
+                <div class="card-arrow">›</div>
+            </a>
+
+            <a href="mailto:contact@reqme.jp" class="contact-card">
+                <div class="card-icon mail">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">メール</div>
+                    <div class="card-desc">contact@reqme.jp</div>
+                </div>
+                <div class="card-arrow">›</div>
+            </a>
         </div>
 
         <div class="notes">
