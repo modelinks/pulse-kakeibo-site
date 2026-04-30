@@ -47,17 +47,14 @@
         .app-store-btn {
             display: inline-block;
             margin-top: 20px;
-            text-decoration: none;
-            background: #1d1d1f;
-            color: #fff;
-            font-size: 15px;
-            font-weight: 600;
-            padding: 12px 28px;
-            border-radius: 12px;
             transition: opacity 0.2s;
         }
         .app-store-btn:hover {
-            opacity: 0.85;
+            opacity: 0.75;
+        }
+        .app-store-btn img {
+            height: 44px;
+            width: auto;
         }
         .hero h2 {
             font-size: 22px;
@@ -145,11 +142,27 @@
         <h2>サポートページ</h2>
         <p>Pulse家計簿に関する各種情報をご確認いただけます</p>
         <a href="https://apps.apple.com/jp/app/id6761704503" target="_blank" rel="noopener noreferrer" class="app-store-btn">
-            App Storeでダウンロード
+            <img src="app_store_badge.svg" alt="App Storeからダウンロード">
         </a>
     </div>
 
     <div class="cards">
+        <a href="help" class="card">
+            <div class="card-icon blue">❓</div>
+            <div class="card-body">
+                <h3>アプリの使い方</h3>
+                <p>ウィジェットの追加方法など</p>
+            </div>
+            <span class="card-arrow">›</span>
+        </a>
+        <a href="contact" class="card">
+            <div class="card-icon purple">💬</div>
+            <div class="card-body">
+                <h3>お問い合わせ</h3>
+                <p>ご質問・ご要望・不具合報告</p>
+            </div>
+            <span class="card-arrow">›</span>
+        </a>
         <a href="terms" class="card">
             <div class="card-icon blue">📋</div>
             <div class="card-body">
@@ -163,14 +176,6 @@
             <div class="card-body">
                 <h3>プライバシーポリシー</h3>
                 <p>個人情報の取り扱いについて</p>
-            </div>
-            <span class="card-arrow">›</span>
-        </a>
-        <a href="contact" class="card">
-            <div class="card-icon purple">💬</div>
-            <div class="card-body">
-                <h3>お問い合わせ</h3>
-                <p>ご質問・ご要望・不具合報告</p>
             </div>
             <span class="card-arrow">›</span>
         </a>
