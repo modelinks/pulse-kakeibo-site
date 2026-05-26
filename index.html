@@ -45,9 +45,12 @@
             height: 100%;
             border-radius: 22px;
         }
+        /* バッジ周囲のクリアスペース確保のため、各 a 要素に余白を持たせる。
+           Google Play バッジは高さの 1/4 (47/4 ≈ 12px) を最低マージンに要求するため
+           gap を 14px に設定 */
         .store-buttons {
             display: flex;
-            gap: 12px;
+            gap: 14px;
             justify-content: center;
             align-items: center;
             margin-top: 20px;
@@ -62,9 +65,14 @@
         .play-store-btn:hover {
             opacity: 0.75;
         }
-        .app-store-btn img,
+        /* Apple/Google 両ガイドラインのペアリング推奨:
+           App Store 40px ↔ Google Play 47px で並べると視覚的に同サイズに揃う */
+        .app-store-btn img {
+            height: 40px;
+            width: auto;
+        }
         .play-store-btn img {
-            height: 44px;
+            height: 47px;
             width: auto;
         }
         .hero h2 {
