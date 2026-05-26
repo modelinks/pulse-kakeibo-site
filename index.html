@@ -65,14 +65,11 @@
         .play-store-btn:hover {
             opacity: 0.75;
         }
-        /* Apple/Google 両ガイドラインのペアリング推奨比率 (App Store : Google Play = 40:47)
-           を維持しつつ全体をスケールアップ。50px : 58.75px ≒ 59px で視覚的に同サイズ */
-        .app-store-btn img {
-            height: 50px;
-            width: auto;
-        }
+        /* バッジの外形高さを揃える（見た目の統一感を優先）。
+           Google Play の最低高さ 47px を上回る 55px に統一 */
+        .app-store-btn img,
         .play-store-btn img {
-            height: 59px;
+            height: 55px;
             width: auto;
         }
         .hero h2 {
