@@ -45,15 +45,25 @@
             height: 100%;
             border-radius: 22px;
         }
-        .app-store-btn {
-            display: inline-block;
+        .store-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
             margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .app-store-btn,
+        .play-store-btn {
+            display: inline-block;
             transition: opacity 0.2s;
         }
-        .app-store-btn:hover {
+        .app-store-btn:hover,
+        .play-store-btn:hover {
             opacity: 0.75;
         }
-        .app-store-btn img {
+        .app-store-btn img,
+        .play-store-btn img {
             height: 44px;
             width: auto;
         }
@@ -142,9 +152,14 @@
         </div>
         <h2>サポートページ</h2>
         <p>Pulse家計簿に関する各種情報をご確認いただけます</p>
-        <a href="https://apps.apple.com/jp/app/id6761704503" target="_blank" rel="noopener noreferrer" class="app-store-btn">
-            <img src="app_store_badge.svg" alt="App Storeからダウンロード">
-        </a>
+        <div class="store-buttons">
+            <a href="https://apps.apple.com/jp/app/id6761704503" target="_blank" rel="noopener noreferrer" class="app-store-btn">
+                <img src="app_store_badge.svg" alt="App Storeからダウンロード">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.pulse.kakeibo" target="_blank" rel="noopener noreferrer" class="play-store-btn">
+                <img src="google_play_badge.svg" alt="Google Playで手に入れよう">
+            </a>
+        </div>
     </div>
 
     <div class="cards">
