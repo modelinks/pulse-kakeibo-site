@@ -103,7 +103,7 @@
             <li>デバイス情報（OSバージョン、機種等。広告配信・解析最適化のため）</li>
             <li>広告識別子（IDFA。OSの設定でトラッキングを許可した場合のみ）</li>
             <li>アプリ内識別子（IDFV、Firebaseインスタンス識別子。匿名の利用状況解析・不正利用防止のため）</li>
-            <li>課金情報（サブスクリプションの状態管理のため、Appleを通じて処理）</li>
+            <li>課金情報（サブスクリプションの状態管理のため、Apple App Store または Google Play を通じて処理）</li>
         </ul>
 
         <h2>2. 情報の利用目的</h2>
@@ -128,7 +128,7 @@
             <li><strong>サーバー側での保持</strong>：中継サーバー（Cloudflare）は画像を保存しません。解析サーバー（Google Gemini API）は当該リクエストの処理にのみ画像を利用し、AIモデルの学習用途には利用されません（Google Cloud / Gemini APIの有償利用規約に基づきます）。</li>
             <li><strong>解析結果の保存先</strong>：金額・日付・店名・カテゴリなどの解析結果は、お客様の端末内にのみ保存されます。</li>
             <li><strong>処理国</strong>：上記サービスの提供国（主に米国）で処理される場合があります。</li>
-            <li><strong>同意の取り扱い</strong>：レシート記録機能自体は、設定画面からいつでも無効にできます。無効にした場合、画像のクラウド送信は行われません。</li>
+            <li><strong>機能のON/OFF</strong>：レシート記録機能は、設定画面でON/OFFを切り替えられます。OFFにした場合、画像のクラウド送信は行われません。</li>
         </ul>
 
         <h2>4. 第三者への提供・外部送信</h2>
@@ -155,40 +155,41 @@
         <h3>Google Gemini API（米国 Google LLC）</h3>
         <p>レシート画像のAI解析にGemini APIを利用しています。解析処理にのみ画像を利用し、AIモデルの学習用途には利用されません（前項3参照）。</p>
 
-        <h3>Apple（米国 Apple Inc.）</h3>
-        <p>サブスクリプションの購入・管理はAppleのApp Store経由で処理されます。iCloudバックアップはAppleのiCloudサービスを通じて行われます。</p>
+        <h3>Apple（米国 Apple Inc.）／ Google（米国 Google LLC）</h3>
+        <p>サブスクリプションの購入・管理は、iOS版はAppleのApp Store、Android版はGoogle Playを通じて処理されます。バックアップ機能を利用した場合、iOS版はAppleのiCloud、Android版はGoogleのGoogle Driveに保存されます。</p>
 
         <p>上記以外の第三者にユーザーの個人情報を提供することはありません。</p>
 
         <h2>5. データの保存場所・保存期間</h2>
         <ul>
             <li><strong>端末内</strong>：収支記録、カテゴリ設定、キーボード着せ替え画像等のデータはユーザーのデバイス内に保存されます。</li>
-            <li><strong>iCloud</strong>：バックアップ機能を利用した場合、データはAppleのiCloudサーバーに保存されます。</li>
+            <li><strong>クラウドバックアップ</strong>：バックアップ機能を利用した場合、iOS版はAppleのiCloud、Android版はGoogleのGoogle Driveに保存されます。</li>
             <li><strong>レシート画像</strong>：解析処理の終了とともに中継・解析サーバー側からは破棄されます。端末内にも画像そのものは保存されません（解析結果のみ保存されます）。</li>
         </ul>
         <p>データの保存期間は、ユーザーがアプリまたはデータを削除するまでです。</p>
 
         <h2>6. トラッキングについて</h2>
-        <p>本アプリではApp Tracking Transparency（ATT）に基づき、初回起動時等にトラッキング許可のダイアログを表示します。</p>
+        <p><strong>iOS版</strong>：App Tracking Transparency（ATT）に基づき、初回起動時等にトラッキング許可のダイアログを表示します。</p>
         <ul>
             <li>「許可」を選択した場合、AdMobおよびAppsFlyer等で広告識別子（IDFA）を用いた広告最適化・効果計測が行われます。</li>
             <li>「許可しない」を選択した場合、識別子の収集は行われず、コンテキスト広告のみが表示されます。</li>
-            <li>設定はiOSの「設定 ＞ プライバシーとセキュリティ ＞ トラッキング」からいつでも変更できます。</li>
+            <li>設定はiOSの「設定 ＞ プライバシーとセキュリティ ＞ トラッキング」から変更できます。</li>
         </ul>
+        <p><strong>Android版</strong>：Google Play servicesの広告ID（AAID）を利用する場合があります。Android端末の「設定 ＞ Google ＞ 広告」より、広告のパーソナライズをオプトアウトしたり、広告IDを削除したりすることができます。</p>
 
         <h2>7. 通知について</h2>
         <ul>
             <li><strong>プッシュ通知</strong>：FCMを利用して、運営からの重要なお知らせ等を配信する場合があります。</li>
             <li><strong>ローカル通知</strong>：記録リマインダーは端末内のスケジュールにより送信されます。</li>
-            <li>通知は設定画面、またはiOSの設定からいつでも無効にできます。</li>
+            <li>通知はアプリ内の設定画面、または端末側のOS設定（iOS／Android）から無効にできます。</li>
         </ul>
 
         <h2>8. ユーザーの権利・選択</h2>
         <ul>
             <li><strong>データの削除</strong>：アプリ内で個別の記録を削除、またはアプリを削除することで端末内のデータを消去できます。</li>
             <li><strong>レシート機能の停止</strong>：設定画面からレシート記録機能を無効にすると、画像のクラウド送信は行われなくなります。</li>
-            <li><strong>広告トラッキング</strong>：iOSの設定からトラッキングの許可を変更できます。</li>
-            <li><strong>サブスクリプションの解約</strong>：Apple IDの設定から行えます。</li>
+            <li><strong>広告トラッキング</strong>：iOS版はiOSの設定から、Android版はGoogleの広告設定から、それぞれ許可・オプトアウトを変更できます。</li>
+            <li><strong>サブスクリプションの解約</strong>：iOS版はApple IDの設定から、Android版はGoogle Playストアの「定期購入」から行えます。</li>
             <li><strong>開示・訂正・削除のご請求</strong>：個人情報に関する開示・訂正・利用停止等のご請求は、お問い合わせページよりご連絡ください。</li>
         </ul>
 
